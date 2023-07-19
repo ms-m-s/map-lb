@@ -1,13 +1,13 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Map from "./Components/Map";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Map />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
