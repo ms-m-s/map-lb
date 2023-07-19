@@ -321,6 +321,7 @@ export default function Map() {
     fontWeight: "bold",
     fill: "white",
     transform: "translate(47px, 10px)",
+    cursor: "pointer",
   };
 
   const c43 = {
@@ -476,13 +477,16 @@ export default function Map() {
 
   return (
     <>
+      <h1 style={{ textAlign: "center" }}>
+        Please select 'North 2' then 'Dinniyeh'
+      </h1>
       <svg
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        height="95vh"
+        height="90vh"
         width="100%"
         viewBox="0 0 833 875"
         dir="ltr"
@@ -818,7 +822,15 @@ export default function Map() {
               handleNorth2();
             }}
           ></path>
-          <text x="410" y="180" fill="white" style={c42}>
+          <text
+            x="410"
+            y="180"
+            fill="white"
+            style={c42}
+            onClick={() => {
+              handleNorth2();
+            }}
+          >
             North 2
           </text>
           <text id="Danniyeh" x="425" y="435" fill="white" style={txt}>
