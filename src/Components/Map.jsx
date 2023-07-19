@@ -321,7 +321,6 @@ export default function Map() {
     fontWeight: "bold",
     fill: "white",
     transform: "translate(47px, 10px)",
-    cursor: "pointer",
   };
 
   const c43 = {
@@ -418,9 +417,15 @@ export default function Map() {
         fontSize: "18px",
         fontWeight: "bold",
       });
+
       setClickCount(1);
+
       clickRef.current = true;
+
+      document.querySelector("h1").innerHTML = "Please select 'Dinniyeh' area";
     } else {
+      document.querySelector("h1").innerHTML = "Thank you!";
+
       setC39({
         display: "none",
       });
@@ -477,9 +482,7 @@ export default function Map() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>
-        Please select 'North 2' then 'Dinniyeh'
-      </h1>
+      <h1 style={{ textAlign: "center" }}>Please select 'North 2' area</h1>
       <svg
         version="1.1"
         id="Layer_1"
@@ -822,15 +825,7 @@ export default function Map() {
               handleNorth2();
             }}
           ></path>
-          <text
-            x="410"
-            y="180"
-            fill="white"
-            style={c42}
-            onClick={() => {
-              handleNorth2();
-            }}
-          >
+          <text x="410" y="180" fill="white" style={c42}>
             North 2
           </text>
           <text id="Danniyeh" x="425" y="435" fill="white" style={txt}>
