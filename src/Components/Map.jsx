@@ -1,11 +1,17 @@
-import React, { useState, useRef } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 export default function Map() {
-  let [keepShowing, setKeepShowing] = useState([]);
+  const navigate = useNavigate();
 
-  const [clickCount, setClickCount] = useState(0);
-
-  const clickRef = useRef(false);
+  const center = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
 
   const c1 = {
     letterSpacing: "0px",
@@ -13,7 +19,8 @@ export default function Map() {
   };
 
   const c2 = {
-    fill: "rgb(239, 73, 7)",
+    // fill: "rgb(239, 73, 7)",
+    fill: "rgb(200, 100, 70)",
     stroke: "white",
     strokeWidth: 2,
     opacity: 1,
@@ -28,7 +35,8 @@ export default function Map() {
   };
 
   const c4 = {
-    fill: "rgb(0, 112, 174)",
+    // fill: "rgb(0, 112, 174)",
+    fill: "rgb(50, 100, 120)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
@@ -37,11 +45,13 @@ export default function Map() {
   };
 
   const c5 = {
-    fill: "rgb(0, 112, 174)",
+    // fill: "rgb(0, 112, 174)",
+    fill: "rgb(50, 100, 120)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(0, 112, 174)",
+    // stroke: "rgb(0, 112, 174)",
+    stroke: "rgb(50, 100, 120)",
     strokeWidth: 2,
   };
 
@@ -51,65 +61,78 @@ export default function Map() {
   };
 
   const c7 = {
-    fill: "rgb(213, 118, 6)",
+    // fill: "rgb(213, 118, 6)",
+    fill: "rgb(160, 140, 60)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(213, 118, 6)",
+    // stroke: "rgb(213, 118, 6)",
+    stroke: "rgb(160, 140, 60)",
     strokeWidth: 2,
   };
 
   const c8 = {
-    fill: "rgb(213, 118, 6)",
+    // fill: "rgb(213, 118, 6)",
+    fill: "rgb(160, 140, 60)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(213, 118, 6)",
+    // stroke: "rgb(213, 118, 6)",
+    stroke: "rgb(160, 140, 60)",
     strokeWidth: 2,
   };
 
   const c9 = {
-    fill: "rgb(213, 118, 6)",
+    // fill: "rgb(213, 118, 6)",
+    fill: "rgb(160, 140, 60)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(213, 118, 6)",
+    // stroke: "rgb(213, 118, 6)",
+    stroke: "rgb(160, 140, 60)",
     strokeWidth: 2,
   };
 
   const c10 = {
-    fill: "rgb(213, 118, 6)",
+    // fill: "rgb(213, 118, 6)",
+    fill: "rgb(160, 140, 60)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(213, 118, 6)",
+    // stroke: "rgb(213, 118, 6)",
+    stroke: "rgb(160, 140, 60)",
     strokeWidth: 2,
   };
 
   const c11 = { fontSize: "24px", fontWeight: "bold" };
 
   const c12 = {
-    fill: "rgb(178, 2, 24)",
+    // fill: "rgb(178, 2, 24)",
+    fill: "rgb(170, 200, 20)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(178, 2, 24)",
+    // stroke: "rgb(178, 2, 24)",
+    stroke: "rgb(170, 200, 20)",
     strokeWidth: 2,
   };
 
   const c13 = {
-    fill: "rgb(178, 2, 24)",
+    // fill: "rgb(178, 2, 24)",
+    fill: "rgb(170, 200, 20)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(178, 2, 24)",
+    // stroke: "rgb(178, 2, 24)",
+    stroke: "rgb(170, 200, 20)",
     strokeWidth: 2,
   };
 
   const c14 = { fontSize: "18px", fontWeight: "bold" };
 
   const c15 = {
-    fill: "rgb(239, 73, 7)",
+    // fill: "rgb(239, 73, 7)",
+    fill: "rgb(200, 100, 70)",
     stroke: "white",
     strokeWidth: 2,
     opacity: 1,
@@ -117,22 +140,26 @@ export default function Map() {
   };
 
   const c16 = {
-    fill: "rgb(206, 21, 96)",
+    // fill: "rgb(206, 21, 96)",
+    fill: "rgb(160, 101, 6)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(206, 21, 96)",
+    // stroke: "rgb(206, 21, 96)",
+    stroke: "rgb(160, 101, 6)",
     strokeWidth: 2,
   };
 
   const c17 = { fontSize: "14px", fontWeight: "bold" };
 
   const c18 = {
-    fill: "rgb(226, 71, 149)",
+    // fill: "rgb(226, 71, 149)",
+    fill: "rgb(126, 1, 19)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(226, 71, 149)",
+    // stroke: "rgb(226, 71, 149)",
+    stroke: "rgb(126, 1, 19)",
     strokeWidth: 2,
   };
 
@@ -142,11 +169,13 @@ export default function Map() {
   };
 
   const c20 = {
-    fill: "rgb(0, 219, 255)",
+    // fill: "rgb(0, 219, 255)",
+    fill: "rgb(100, 29, 200)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(0, 219, 255)",
+    // stroke: "rgb(0, 219, 255)",
+    stroke: "rgb(100, 29, 200)",
     strokeWidth: 2,
   };
 
@@ -156,20 +185,24 @@ export default function Map() {
   };
 
   const c22 = {
-    fill: "rgb(142, 57, 73)",
+    // fill: "rgb(142, 57, 73)",
+    fill: "rgb(42, 157, 3)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(142, 57, 73)",
+    // stroke: "rgb(142, 57, 73)",
+    stroke: "rgb(42, 157, 3)",
     strokeWidth: 2,
   };
 
   const c23 = {
-    fill: "rgb(142, 57, 73)",
+    // fill: "rgb(142, 57, 73)",
+    fill: "rgb(42, 157, 3)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(142, 57, 73)",
+    // stroke: "rgb(142, 57, 73)",
+    stroke: "rgb(42, 157, 3)",
     strokeWidth: 2,
   };
 
@@ -179,7 +212,8 @@ export default function Map() {
   };
 
   const c25 = {
-    fill: "rgb(5, 169, 196)",
+    // fill: "rgb(5, 169, 196)",
+    fill: "rgb(5, 69, 96)",
     opacity: 1,
     cursor: "pointer",
     stroke: "white",
@@ -187,11 +221,13 @@ export default function Map() {
   };
 
   const c26 = {
-    fill: "rgb(5, 169, 196)",
+    // fill: "rgb(5, 169, 196)",
+    fill: "rgb(5, 69, 96)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(5, 169, 196)",
+    // stroke: "rgb(5, 169, 196)",
+    stroke: "rgb(5, 69, 96)",
     strokeWidth: 3,
   };
 
@@ -202,20 +238,24 @@ export default function Map() {
   };
 
   const c28 = {
-    fill: "rgb(1, 114, 63)",
+    // fill: "rgb(1, 114, 63)",
+    fill: "rgb(100, 100, 6)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(1, 114, 63)",
+    // stroke: "rgb(1, 114, 63)",
+    stroke: "rgb(100, 100, 6)",
     strokeWidth: 2,
   };
 
   const c29 = {
-    fill: "rgb(1, 114, 63)",
+    // fill: "rgb(1, 114, 63)",
+    fill: "rgb(100, 100, 6)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(1, 114, 63)",
+    // stroke: "rgb(1, 114, 63)",
+    stroke: "rgb(100, 100, 6)",
     strokeWidth: 2,
   };
 
@@ -226,20 +266,24 @@ export default function Map() {
   };
 
   const c31 = {
-    fill: "rgb(12, 186, 82)",
+    // fill: "rgb(12, 186, 82)",
+    fill: "rgb(120, 16, 82)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(12, 186, 82)",
+    // stroke: "rgb(12, 186, 82)",
+    stroke: "rgb(120, 16, 82)",
     strokeWidth: 2,
   };
 
   const c32 = {
-    fill: "rgb(12, 186, 82)",
+    // fill: "rgb(12, 186, 82)",
+    fill: "rgb(120, 16, 82)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(12, 186, 82)",
+    // stroke: "rgb(12, 186, 82)",
+    stroke: "rgb(120, 16, 82)",
     strokeWidth: 2,
   };
 
@@ -249,38 +293,46 @@ export default function Map() {
   };
 
   const c34 = {
-    fill: "rgb(239, 196, 23)",
+    // fill: "rgb(239, 196, 23)",
+    fill: "rgb(29, 196, 230)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(239, 196, 23)",
+    // stroke: "rgb(239, 196, 23)",
+    stroke: "rgb(29, 196, 230)",
     strokeWidth: 2,
   };
 
   const c35 = {
-    fill: "rgb(239, 196, 23)",
+    // fill: "rgb(239, 196, 23)",
+    fill: "rgb(29, 196, 230)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(239, 196, 23)",
+    // stroke: "rgb(239, 196, 23)",
+    stroke: "rgb(29, 196, 230)",
     strokeWidth: 2,
   };
 
   const c36 = {
-    fill: "rgb(239, 196, 23)",
+    // fill: "rgb(239, 196, 23)",
+    fill: "rgb(29, 196, 230)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(239, 196, 23)",
+    // stroke: "rgb(239, 196, 23)",
+    stroke: "rgb(29, 196, 230)",
     strokeWidth: 2,
   };
 
   const c37 = {
-    fill: "rgb(239, 196, 23)",
+    // fill: "rgb(239, 196, 23)",
+    fill: "rgb(29, 196, 230)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(239, 196, 23)",
+    // stroke: "rgb(239, 196, 23)",
+    stroke: "rgb(29, 196, 230)",
     strokeWidth: 2,
   };
 
@@ -289,32 +341,38 @@ export default function Map() {
     fontWeight: "bold",
   };
 
-  let [c39, setC39] = useState({
-    fill: "rgb(255, 119, 1)",
+  const c39 = {
+    // fill: "rgb(255, 119, 1)",
+    fill: "rgb(55, 91, 1)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(255, 119, 1)",
+    // stroke: "rgb(255, 119, 1)",
+    stroke: "rgb(55, 91, 1)",
     strokeWidth: 2,
-  });
+  };
 
-  let [c40, setC40] = useState({
-    fill: "rgb(255, 119, 1)",
+  const c40 = {
+    // fill: "rgb(255, 119, 1)",
+    fill: "rgb(55, 91, 1)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(255, 119, 1)",
+    // stroke: "rgb(255, 119, 1)",
+    stroke: "rgb(55, 91, 1)",
     strokeWidth: 2,
-  });
+  };
 
-  let [c41, setC41] = useState({
-    fill: "rgb(255, 119, 1)",
+  const c41 = {
+    // fill: "rgb(255, 119, 1)",
+    fill: "rgb(55, 91, 1)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(255, 119, 1)",
+    // stroke: "rgb(255, 119, 1)",
+    stroke: "rgb(55, 91, 1)",
     strokeWidth: 2,
-  });
+  };
 
   const c42 = {
     fontSize: "24px",
@@ -324,11 +382,13 @@ export default function Map() {
   };
 
   const c43 = {
-    fill: "rgb(84, 84, 84)",
+    // fill: "rgb(84, 84, 84)",
+    fill: "rgb(8, 4, 184)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(84, 84, 84)",
+    // stroke: "rgb(84, 84, 84)",
+    stroke: "rgb(8, 4, 184)",
     strokeWidth: 2,
   };
 
@@ -339,157 +399,41 @@ export default function Map() {
   };
 
   const c45 = {
-    fill: "rgb(145, 145, 145)",
+    // fill: "rgb(145, 145, 145)",
+    fill: "rgb(0, 125, 245)",
     opacity: 1,
     strokeOpacity: 1,
     cursor: "pointer",
-    stroke: "rgb(145, 145, 145)",
+    // stroke: "rgb(145, 145, 145)",
+    stroke: "rgb(0, 125, 245)",
     strokeWidth: 2,
   };
 
   const c46 = { fontSize: "12px", fontWeight: "bold", fill: "white" };
 
-  let [txt, setTxt] = useState({
-    display: "none",
-  });
-
-  let [s45, setS45] = useState({
-    display: "none",
-  });
-
-  let [s93, setS93] = useState({
-    display: "none",
-  });
-
-  let [s151, setS151] = useState({
-    display: "none",
-  });
-
-  let [villageName, setVillageName] = useState({
-    display: "none",
-  });
-
-  const handleNorth2 = () => {
-    if (clickCount === 0) {
-      setC39({
-        fill: "rgb(198, 89, 6)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        stroke: "white",
-        transform: "translate(-125%, -15%) scale(3)",
-      });
-
-      setC40({
-        fill: "rgb(255, 119, 1)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        stroke: "white",
-        transform: "translate(-125%, -15%) scale(3)",
-      });
-
-      setC41({
-        fill: "rgb(255, 145, 45)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        stroke: "white",
-        transform: "translate(-125%, -15%) scale(3)",
-      });
-
-      setKeepShowing(["tripoli", "Miniyeh", "Danniyeh"]);
-
-      Array.from(document.querySelectorAll("path")).forEach((elt) => {
-        if (!keepShowing.includes(elt.id)) {
-          elt.style.transform = "scale(0)";
-        }
-      });
-
-      Array.from(document.querySelectorAll("text")).forEach((elt) => {
-        if (!keepShowing.includes(elt.id)) {
-          elt.style.display = "none";
-        }
-      });
-
-      setTxt({
-        fill: "white",
-        fontSize: "18px",
-        fontWeight: "bold",
-      });
-
-      setClickCount(1);
-
-      clickRef.current = true;
-
-      document.querySelector("h1").innerHTML = "Please select 'Dinniyeh' area";
-    } else {
-      document.querySelector("h1").innerHTML = "Thank you!";
-
-      setC39({
-        display: "none",
-      });
-
-      setC40({
-        display: "none",
-      });
-
-      setTxt({
-        display: "none",
-      });
-
-      setC41({
-        fill: "rgb(255, 145, 45)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        stroke: "white",
-        transform: "translate(-255%, -60%) scale(5)",
-      });
-
-      setS45({
-        fill: "rgb(45, 45, 45)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        transform: "translate(-165%, -10%) scale(3)",
-      });
-
-      setS93({
-        fill: "rgb(93, 93, 93)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        transform: "translate(-145%, -5%) scale(3)",
-      });
-
-      setS151({
-        fill: "rgb(151, 151, 151)",
-        opacity: 1,
-        cursor: "pointer",
-        strokeWidth: 2,
-        transform: "translate(-145%, 3%) scale(3)",
-      });
-
-      setVillageName({
-        fill: "white",
-        wordSpacing: "3px",
-        fontSize: "22px",
-        fontWeight: "bold",
-      });
-    }
-  };
-
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Please select 'North 2' area</h1>
+      <h1 style={{ textAlign: "center" }}>
+        Please select 'North 2' governorate
+      </h1>
+      <div role="presentation" style={center}>
+        <Breadcrumbs aria-label="breadcrumb">
+          <Typography color="text.primary">Lebanon</Typography>
+          <Link underline="hover" color="inherit" href="/north2">
+            North 2
+          </Link>
+          <Link underline="hover" color="inherit" href="/dinniyeh">
+            Dinniyeh
+          </Link>
+        </Breadcrumbs>
+      </div>
       <svg
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        height="90vh"
+        height="75vh"
         width="100%"
         viewBox="0 0 833 875"
         dir="ltr"
@@ -721,28 +665,28 @@ export default function Map() {
             <path
               id="tripoli"
               style={c39}
-              onClick={clickRef.current ? null : handleNorth2}
+              onClick={() => {
+                navigate("/north2");
+              }}
               d="M421.01,169.02c0.07-1.47-3-1.87-5.8-4.4c-2.26-2.04-4.42-5.53-3.46-7.56c0.62-1.3,1.95-0.78,3.28-2.26 c2.63-2.92,0.67-8.48,0.53-8.86c-0.66-1.8-1.67-3.14-2.6-4.11c-0.75,0.52-1.54,0.91-2.7,1.07c-2.99,0.41-3.71-1.33-6.79-1 c-3.92,0.42-5.02,3.47-7.56,2.78c-2.12-0.57-2.31-2.96-3.94-2.89c-1.76,0.07-3.58,2.94-2.96,4.5c0.43,1.07,1.62,0.6,2.71,1.84 c1.42,1.62,0.25,3.41,1.48,6.67c0.61,1.63,3.87,3.12,4.68,4.24c1.49-0.32,2.94-0.29,4.09,0.46c1.26,0.82,1.34,1.96,2.75,5.53 c2.22,5.63,3.68,9.32,6.04,9.7c2.28,0.37,3.76-2.62,5.63-1.78c0.17,0.07,0.32,0.17,0.46,0.29c1.28-1.08,2.34-2.05,3.17-2.85 C420.75,169.68,420.99,169.42,421.01,169.02z"
             ></path>
             <path
               id="tripoli"
               style={c39}
-              onClick={clickRef.current ? null : handleNorth2}
+              onClick={() => {
+                navigate("/north2");
+              }}
               d="M382.67,179.08c0.58,1.16,0.75,2.11,1.48,2.3c1.21,0.32,2.27-1.87,4.61-4.28c3.92-4.05,6.68-3.82,7.11-5.95 c0.2-1-0.13-2.44-2.18-4.49c-1.58,1.4-3.19,2.68-4.09,3.67c-1.95,2.15-4.64,3.94-8.82,6.13 C381.69,177.38,382.27,178.28,382.67,179.08z"
             ></path>
-            <text id="tripoli" x="142" y="325" fill="white" style={txt}>
-              Tripoli
-            </text>
           </g>
           <path
             id="Miniyeh"
             d="M419.7,152.5c0.85-0.79-0.1-2.16,0.63-4.12c0.9-2.46,3.78-4.13,6.25-4.2 c1.9-0.06,2,0.88,4.92,1.74c2.78,0.82,7.82,1.49,9.69-0.87c0.8-1.02,0.62-2.09,1.56-2.46c0.96-0.37,2.33,0.3,3.05,1.27 c0.76,1.03,0.34,1.81,0.7,4.28c0.2,1.37,0.6,4.08,1.64,4.28c0.91,0.18,1.35-1.8,3.36-2.3c1.25-0.31,1.82,0.26,2.27-0.16 c1.19-1.11-2.02-5.81-1.09-6.58c0.56-0.46,1.87,1.14,4.84,1.59c1.06,0.16,2.2,0.33,3.28-0.16c2.12-0.96,3.39-4.16,2.97-6.82 c-0.66-4.18-5.37-6.33-4.69-7.61c0.41-0.78,2.17,0.01,3.44-1.27c1.05-1.06,0.65-2.41,1.41-2.78c0.39-0.19,1.02-0.08,2.1,0.79 c0.83-1.41,2.23-1.79,2.35-3.33c0.13-1.61-1.22-3.53-2.89-4.12c-2.94-1.05-5.71,2.4-7.19,1.27c-1.22-0.94,0.36-3.53-1.33-5.55 c-0.99-1.18-2.18-1.05-2.5-2.06c-0.22-0.68,0.09-1.46,0.62-2.2c-0.46,0-0.93,0.04-1.44,0.19c-2.07,0.61-3.1,2.38-4.27,4.12 c-1.6,2.36,0.43-1.11-11.5,12.46c-6.63,7.54-6.28,7.5-7.23,8.01c-5.38,2.88-8.68-0.09-14.35,3.45c-1.49,0.93-2.37,1.82-3.33,2.49 c0.93,0.97,1.94,2.31,2.6,4.11c0.11,0.29,1.26,3.55,0.66,6.39C417.65,152.89,419.01,153.15,419.7,152.5z"
             style={c40}
-            onClick={clickRef.current ? null : handleNorth2}
+            onClick={() => {
+              navigate("/north2");
+            }}
           ></path>
-          <text id="Miniyeh" x="270" y="275" fill="white" style={txt}>
-            Miniyeh
-          </text>
           <path
             id="Danniyeh"
             d="M591.05,129.47 
@@ -822,53 +766,11 @@ export default function Map() {
               C590.62,133.71,591.26,132.14,591.05,129.47z"
             style={c41}
             onClick={() => {
-              handleNorth2();
+              navigate("/north2");
             }}
           ></path>
           <text x="410" y="180" fill="white" style={c42}>
             North 2
-          </text>
-          <text id="Danniyeh" x="425" y="435" fill="white" style={txt}>
-            Dinniyeh
-          </text>
-          <text id="Bakhaoun" x="365" y="265" fill="white" style={villageName}>
-            Bakhaoun
-          </text>
-          <path
-            id="45"
-            d="M 591.05 129.47 c -4.17 -0.34 -4.39 -1.48 -8.36 -1.43 c -3.55 0.04 -4.46 0.96 -8.67 1.43 c -3.71 0.41 -3.84 -0.21 -8.75 -0.16 c -8.71 0.09 -13.21 2.08 -14.69 -0.16 c -0.27 -0.4 -0.26 -0.67 -0.31 -2.46 c 0 -0.08 0 -0.15 -0.01 -0.23 c -1.73 0.05 -3.53 0.47 -4.68 1.78 c -2.34 2.65 0.08 6.56 -2.11 8.8 c -2.9 2.97 -10.34 -0.61 -11.13 1.19 c -0.55 1.25 2.88 3.27 2.23 5.24 c -0.55 1.65 -3.41 1.53 -3.63 2.97 c -0.19 1.21 1.74 1.67 2.23 3.33 c 1.01 3.45 -5.14 9.08 -7.03 8.09 c -1.06 -0.55 -0.45 -2.99 -1.52 -3.33 c -1.11 -0.36 -2.69 1.96 -2.81 2.14 c -0.25 0.37 -2 2.98 -1.17 5.83 c 0.76 2.64 2.89 2.55 3.52 5.12 c 0.54 2.23 -0.93 2.85 -0.47 4.88 c 0.61 2.69 3.39 2.49 6.33 5.95 c 2.82 3.33 1.49 4.98 3.99 6.9 c 2.91 2.25 5.06 0.26 36.18 -17.9 c 2.04 1.45 1.5 3.06 3.16 3.69 c 3.72 -0.73 6.55 -6.95 7.38 -11.54 c 0.5 -2.74 0.26 -4.74 1.88 -6.07 c 1.31 -1.08 2.18 -0.35 3.63 -1.19 c 1 -0.58 2.27 -1.9 3.75 -12.02 c 0.69 -4.68 0.55 -5.32 1.41 -6.66 c 1.59 -2.5 3.5 -2.52 4.45 -5.12 z"
-            style={s45}
-          ></path>
-          <text
-            id="ElKharroub"
-            x="240"
-            y="375"
-            fill="white"
-            style={villageName}
-          >
-            El Kharroub
-          </text>
-          <path
-            id="67"
-            d="M 591.05 129.47 c -4.17 -0.34 -4.39 -1.48 -8.36 -1.43 c -3.55 0.04 -4.46 0.96 -8.67 1.43 c -3.71 0.41 -3.84 -0.21 -8.75 -0.16 c -8.71 0.09 -13.21 2.08 -14.69 -0.16 c -0.55 1.65 -3.41 1.53 -3.63 2.97 c -0.19 1.21 1.74 1.67 2.23 3.33 c 1.01 3.45 -5.14 9.08 -7.03 8.09 c 0.76 2.64 2.89 2.55 3.52 5.12 c 0.61 2.69 3.39 2.49 6.33 5.95 c 2.82 3.33 1.49 4.98 3.99 6.9 c 2.91 2.25 5.06 0.26 36.18 -17.9 c 0.5 -2.74 0.26 -4.74 1.88 -6.07 c 1.31 -1.08 2.18 -0.35 3.63 -1.19 z"
-            style={s93}
-          ></path>
-          <text id="Sir" x="485" y="390" fill="white" style={villageName}>
-            Sir
-          </text>
-          <path
-            id="150"
-            d="M 591.05 129.47 c -2.62 4.7 -7.96 9.37 -12.96 10.74 c -3.16 0.86 -4.68 0 -6.09 1.59 c -1.84 2.06 -1.53 6.09 -0.31 8.88 c 1.36 3.14 3.27 3.38 3.28 5.55 c 0.01 2.63 -2.8 5.38 -4.69 5.08 c -1.27 -0.2 -1.45 -1.68 -2.66 -1.74 c -1.47 -0.08 -1.88 2.1 -3.75 3.33 c -2.6 1.72 -4.47 -0.72 -9.38 -0.16 c -4.64 0.53 -5.59 3.02 -8.75 2.22 c -2.39 -0.6 -1.99 -2.06 -4.84 -3.33 c -4.25 -1.89 -7.16 0.44 -9.69 -1.74 c -1.06 -0.92 -0.86 -1.59 -1.88 -3.65 c -1.52 -3.07 -4.66 -6.95 -8.44 -8.25 c -4.13 -1.42 -5.08 1.61 -12.03 1.03 c -4.17 -0.34 -4.39 -1.48 -8.36 -1.43 c -3.55 0.04 -4.46 0.96 -8.67 1.43 c -0.27 -0.4 -0.26 -0.67 -0.31 -2.46 c 0 -0.08 0 -0.15 -0.01 -0.23 c -1.73 0.05 -3.53 0.47 -4.68 1.78 c -2.9 2.97 -10.34 -0.61 -11.13 1.19 c 1.01 3.45 -5.14 9.08 -7.03 8.09 c 0.76 2.64 2.89 2.55 3.52 5.12 c 2.82 3.33 1.49 4.98 3.99 6.9 c 2.91 2.25 5.06 0.26 7.85 2.74 c 2.04 1.8 1.88 3.73 4.1 4.52 c 1.51 0.54 2.41 -0.06 3.52 0.83 c 1.17 0.95 0.58 1.96 1.76 3.09 c 1.34 1.28 2.71 0.59 3.63 1.9 c 0.59 0.84 0.08 1.2 0.7 2.26 c 0.82 1.4 1.9 1.14 2.7 2.5 c 0.7 1.19 0.12 1.82 0.7 2.38 c 1.25 1.22 4.21 -1.46 5.98 -0.36 c 1.64 1.02 0.05 3.92 1.76 5.71 c 2.01 2.11 5.51 -0.54 8.79 1.78 c 2.04 1.45 1.5 3.06 3.16 3.69 c 2.47 0.94 4.11 -2.46 9.38 -4.28 c 4.43 -1.53 5.61 0.08 9.38 -1.9 c 1.19 -0.62 4.01 -2.11 5.27 -5.12 c 1.5 -3.57 0.06 -7.53 0.47 -7.61 c 0.39 -0.08 1.1 3.69 2.11 3.69 c 1.18 0 1.44 -5.18 2.81 -5.35 c 0.57 -0.07 1.41 0.73 2.66 3.86 c 0.34 -0.67 0.75 -1.29 1.21 -1.84 c 1.91 -2.26 3.98 -2.24 4.57 -4.52 c 0.46 -1.78 -0.31 -3.64 0.59 -4.16 c 0.44 -0.26 0.74 0.14 1.29 0 c 1.76 -0.44 0.77 -5.05 3.16 -7.02 c 1.37 -1.12 2.1 0.05 4.69 -1.19 c 2.5 -1.19 2.27 -2.5 4.81 -3.57 c 2.07 -0.88 3.08 -0.37 3.87 -1.43 c 0.93 -1.24 -0.1 -2.44 0.82 -3.69 c 1 -1.36 2.62 -0.49 3.87 -1.9 c 1.12 -1.28 0.35 -2.6 1.41 -3.57 c 1.09 -0.99 2.38 -0.02 4.1 -0.36 c 3.72 -0.73 6.55 -6.95 7.38 -11.54 c 0.5 -2.74 0.26 -4.74 1.88 -6.07 c 1.31 -1.08 2.18 -0.35 3.63 -1.19 c 1 -0.58 2.27 -1.9 3.75 -12.02 c 0.69 -4.68 0.55 -5.32 1.41 -6.66 c 1.59 -2.5 3.5 -2.52 4.45 -5.12 c 0.78 -2.13 -0.22 -2.88 0.7 -4.88 C 590.62 133.71 591.26 132.14 591.05 129.47 z"
-            style={s151}
-          ></path>
-          <text
-            id="HakelElAzimeh"
-            x="280"
-            y="550"
-            fill="white"
-            style={villageName}
-          >
-            Hakel El Azimeh
           </text>
         </g>
         <g id="beirut2">
