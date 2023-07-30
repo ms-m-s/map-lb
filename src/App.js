@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Map from "./Components/Map";
 import North2 from "./Components/North2";
 import Dinniyeh from "./Components/Dinniyeh";
