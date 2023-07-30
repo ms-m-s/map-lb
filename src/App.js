@@ -5,7 +5,7 @@ import Dinniyeh from "./Components/Dinniyeh";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/map-lb">
       <Routes>
         <Route path="/" element={<Map />} />
         <Route path="/north2" element={<North2 />} />
