@@ -144,10 +144,10 @@ export default function Dinniyeh() {
       <h1 style={{ textAlign: "center" }}>Please select any village</h1>
       <div role="presentation">
         <Breadcrumbs aria-label="breadcrumb" style={center}>
-          <Link underline="hover" color="inherit" href="/">
+          <Link underline="hover" color="inherit" href="//map-lb">
             Lebanon
           </Link>
-          <Link underline="hover" color="inherit" href="/north2">
+          <Link underline="hover" color="inherit" href="/map-lb/north2">
             North 2
           </Link>
           <Typography color="text.primary">Dinniyeh</Typography>

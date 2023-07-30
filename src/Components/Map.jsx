@@ -419,10 +419,10 @@ export default function Map() {
       <div role="presentation" style={center}>
         <Breadcrumbs aria-label="breadcrumb">
           <Typography color="text.primary">Lebanon</Typography>
-          <Link underline="hover" color="inherit" href="/north2">
+          <Link underline="hover" color="inherit" href="/map-lb/north2">
             North 2
           </Link>
-          <Link underline="hover" color="inherit" href="/dinniyeh">
+          <Link underline="hover" color="inherit" href="/map-lb/dinniyeh">
             Dinniyeh
           </Link>
         </Breadcrumbs>

@@ -55,11 +55,11 @@ export default function North2() {
       <h1 style={{ textAlign: "center" }}>Please select 'Dinniyeh' district</h1>
       <div role="presentation" style={center}>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" color="inherit" href="/">
+          <Link underline="hover" color="inherit" href="/map-lb">
             Lebanon
           </Link>
           <Typography color="text.primary">North 2</Typography>
-          <Link underline="hover" color="inherit" href="/dinniyeh">
+          <Link underline="hover" color="inherit" href="/map-lb/dinniyeh">
             Dinniyeh
           </Link>
         </Breadcrumbs>
