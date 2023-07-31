@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 
 export default function Map() {
   const navigate = useNavigate();
@@ -419,12 +420,14 @@ export default function Map() {
       <div role="presentation" style={center}>
         <Breadcrumbs aria-label="breadcrumb">
           <Typography color="text.primary">Lebanon</Typography>
-          <Link underline="hover" color="inherit" href="/map-lb/north2">
+          {/* <Link underline="hover" color="inherit" href="/north2">
             North 2
-          </Link>
-          <Link underline="hover" color="inherit" href="/map-lb/dinniyeh">
+          </Link> */}
+          <Link to="/north2">North 2</Link>
+          {/* <Link underline="hover" color="inherit" href="/dinniyeh">
             Dinniyeh
-          </Link>
+          </Link> */}
+          <Link to="/dinniyeh">Dinniyeh</Link>
         </Breadcrumbs>
       </div>
       <svg

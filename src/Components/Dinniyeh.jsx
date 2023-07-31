@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 
 export default function Dinniyeh() {
   let [village, setVillage] = useState("");
@@ -144,12 +145,14 @@ export default function Dinniyeh() {
       <h1 style={{ textAlign: "center" }}>Please select any village</h1>
       <div role="presentation">
         <Breadcrumbs aria-label="breadcrumb" style={center}>
-          <Link underline="hover" color="inherit" href="/map-lb">
+          {/* <Link underline="hover" color="inherit" href="/">
             Lebanon
-          </Link>
-          <Link underline="hover" color="inherit" href="/map-lb/north2">
+          </Link> */}
+          <Link to="/">Lebanon</Link>
+          {/* <Link underline="hover" color="inherit" href="/north2">
             North 2
-          </Link>
+          </Link> */}
+          <Link to="/north2">North 2</Link>
           <Typography color="text.primary">Dinniyeh</Typography>
         </Breadcrumbs>
       </div>

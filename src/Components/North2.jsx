@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+// import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 
 export default function North2() {
   const navigate = useNavigate();
@@ -55,13 +56,15 @@ export default function North2() {
       <h1 style={{ textAlign: "center" }}>Please select 'Dinniyeh' district</h1>
       <div role="presentation" style={center}>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" color="inherit" href="/map-lb">
+          {/* <Link underline="hover" color="inherit" href="/">
             Lebanon
-          </Link>
+          </Link> */}
+          <Link to="/">Lebanon</Link>
           <Typography color="text.primary">North 2</Typography>
-          <Link underline="hover" color="inherit" href="/map-lb/dinniyeh">
+          {/* <Link underline="hover" color="inherit" href="/dinniyeh">
             Dinniyeh
-          </Link>
+          </Link> */}
+          <Link to="/dinniyeh">Dinniyeh</Link>
         </Breadcrumbs>
       </div>
       <div style={container}>
